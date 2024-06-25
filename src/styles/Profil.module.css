@@ -83,7 +83,7 @@ margin-bottom: 80px;
     position: absolute;
     top: 50%;
     left: 50%;
-   
+    z-index: 99;
     box-shadow: 24px;
     outline: none;
     display: flex;
@@ -96,8 +96,8 @@ margin-bottom: 80px;
 
   
   .modalImage {
-    max-width: 770px;
-    max-height: 1027px;
+    transform: scale(1.05);
+    
   }
   
   .closeButton {
@@ -109,6 +109,18 @@ margin-bottom: 80px;
   .backgroundBlur {
     filter: blur(5px);
   }
+
+  .blurOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(5px);
+    z-index: 1; /* Положение под содержимым модального окна */
+  }
+  
+  
   .modalBox>div{
   position: relative;
   }
@@ -119,6 +131,9 @@ margin-bottom: 80px;
     .biography{
       gap: 100px;
       flex-wrap: wrap;
+    }
+    .modalBox>div {
+      transform: scale(0.8);
     }
   }
   @media screen and (max-width: 500px) {
@@ -132,15 +147,20 @@ margin-bottom: 80px;
     .buttonDiv,.button{
       width: 100%;
     }
+    .modalBox>div {
+      transform: scale(0.87);
+    }
   }
   @media screen and (max-width: 350px) {
+    .modalBox>div {
+      transform: scale(0.67);
+    }
+    .biography>img{
+      width: 300px;
+      height: 400px;
+    }
     .images>img{
       width: 300px;
       height: 400px;
     }
-    .biography>img{
-      width: 300px;
-      height: 380px;
-    }
-    
   }

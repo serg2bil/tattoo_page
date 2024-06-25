@@ -345,10 +345,14 @@ transform: translateY(25px);
 .img{
   border-radius: 20px;
   width: 360px;
-  
+  transition: all 0.2s;
   border: 2px solid rgba(46, 45, 45, 0.637);
+  cursor: pointer;
 }
-
+.img:hover{
+    cursor: pointer;
+  transform: scale(1.02);
+}
 
 /* Analitiks */
 .analitics{
@@ -549,6 +553,9 @@ color: #c8c8c8;
   }
   .bottomtTitle{
     font-size: 45px;
+  }.card{
+    width: 300px;
+    height: 390px;
   }
 }
 

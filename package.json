@@ -24,6 +24,7 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^14.1.2",
     "react-transition-group": "^4.4.5",
+    "react-viewer": "^3.2.2",
     "styled-components": "^6.1.11",
     "viewerjs": "^1.11.6"
   }

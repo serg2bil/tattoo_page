@@ -37,28 +37,28 @@ export default function MainLayout({ children }) {
           <Link
             className={style.option}
             onClick={handleLinkClick}
-            href="#aboutUs"
+            href="/#aboutUs"
           >
             <p>{t("footer.navigation.aboutUs")}</p>
           </Link>
           <Link
             className={style.option}
             onClick={handleLinkClick}
-            href="#ourGroup"
+            href="/#ourGroup"
           >
             <p>{t("footer.navigation.ourGroup")}</p>
           </Link>
           <Link
             className={style.option}
             onClick={handleLinkClick}
-            href="#offers"
+            href="/#offers"
           >
             <p>{t("footer.navigation.offers")}</p>
           </Link>
           <Link
             className={style.option}
             onClick={handleLinkClick}
-            href="#portfolio"
+            href="/#portfolio"
           >
             <p>{t("footer.navigation.portfolio")}</p>
           </Link>
@@ -232,16 +232,16 @@ export default function MainLayout({ children }) {
             </div>
             <div className={style.item2}>
               <nav className={style.nav_menu}>
-                <Link href="#aboutUs">
+                <Link href="/#aboutUs">
                   <p>{t("header.nav.aboutUs")}</p>
                 </Link>
-                <Link href="#ourGroup">
+                <Link href="/#ourGroup">
                   <p>{t("header.nav.ourGroup")}</p>
                 </Link>
-                <Link href="#offers">
+                <Link href="/#offers">
                   <p>{t("header.nav.offers")}</p>
                 </Link>
-                <Link href="#portfolio">
+                <Link href="/#portfolio">
                   <p>{t("header.nav.portfolio")}</p>
                 </Link>
               </nav>
@@ -320,6 +320,7 @@ export default function MainLayout({ children }) {
         <div className={style.marginL} />
         <div>
           <main>{children}</main>
+          {router.pathname == '/' ?
           <footer>
             <div className={style.gridContainerS}>
               <div className={style.SmarginL} />
@@ -364,6 +365,7 @@ export default function MainLayout({ children }) {
               <div className={style.SmarginR} />
             </div>
           </footer>
+           : ''}
         </div>
         <div className={style.marginR} />
       </div>

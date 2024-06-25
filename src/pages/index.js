@@ -1,12 +1,19 @@
-import { Button } from "@mui/material";
-import style from "@/styles/Home.module.css";
+import { useState, useEffect, useRef } from "react";
 import MainLayout from "@/layout/layout";
 import Emploeers from "@/components/cards/emploeers";
-
-import TextFieldBox from "@/components/textField/textField";
+import style from "@/styles/Home.module.css";
+import { Button } from "@mui/material";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+
+import TextFieldBox from "@/components/textField/textField";
+
+import Viewer from "viewerjs"; // Import Viewer library
+import "viewerjs/dist/viewer.min.css"; // Import Viewer styles
+
+
 export default function Home() {
+  const viewerRef = useRef(null);
   const { t } = useTranslation("home");
   const cardsData = [
     {
@@ -37,7 +44,81 @@ export default function Home() {
 
     return urls;
   };
+
   const imageUrls = generateImageUrls();
+  const [openViewer, setOpenViewer] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (openViewer && viewerRef.current) {
+      const viewer = new Viewer(viewerRef.current, {
+        scalable: true,
+        backdrop: true,
+        button: true,
+        focus: false,
+        fullscreen: true,
+        loading: false,
+        loop: false,
+        keyboard: true,
+        movable: false,
+        navbar: false,
+        rotatable: false,
+        slideOnTouch: false,
+        title: false,
+        toggleOnDblclick: false,
+        toolbar: false,
+        tooltip: false,
+        transition: true,
+        zoomable: false,
+        zoomOnTouch: false,
+        zoomOnWheel: false,
+      });
+
+      return () => {
+        viewer.destroy();
+      };
+    }
+  }, [openViewer]);
+
+  const handleOpenViewer = (index) => {
+    setSelectedImageIndex(index);
+    setOpenViewer(true);
+  };
+
+  const handleCloseViewer = () => {
+    setOpenViewer(false);
+  };
+
+  useEffect(() => {
+    
+    const viewer = new Viewer(document.getElementById("images"), {
+      scalable: true,
+      backdrop: true,
+      button: true,
+      focus: false,
+      fullscreen: true,
+      loading: false,
+      loop: false,
+      keyboard: true,
+      movable: false,
+      navbar: false,
+      rotatable: false,
+      slideOnTouch: false,
+      title: false,
+      toggleOnDblclick: false,
+      toolbar: false,
+      tooltip: false,
+      transition: true,
+      zoomable: false,
+      zoomOnTouch: false,
+      zoomOnWheel: false,
+    });
+
+    return () => {
+      
+      viewer.destroy();
+    };
+  }, []); 
 
   return (
     <>
@@ -46,7 +127,7 @@ export default function Home() {
           <div className={style.greeting}>
             <h1>{t("firstScreen.title")}</h1>
             <p>{t("firstScreen.slogan")}</p>
-
+            <a href="#contact">
             <Button
               className={style.button}
               sx={{
@@ -62,6 +143,7 @@ export default function Home() {
             >
               {t("buttonConsul")}
             </Button>
+            </a>
           </div>
         </div>
         <div className={style.gridContainerM}>
@@ -169,17 +251,17 @@ export default function Home() {
             <div id="portfolio" className={style.portfolio}>
               <h4 className={style.title}>{t("portfolio.tittle")}</h4>
               <div>
-                <div className={style.cardsFlex}>
-                  {imageUrls.map((url, index) => (
-                    <img
-                      className={style.img}
-                      key={index}
-                      src={url}
-                      alt={`Image ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
+              <div id="images" className={style.cardsFlex}> 
+            {imageUrls.map((url, index) => (
+              <img
+                className={style.img}
+                key={index}
+                src={url}
+                alt={`Image ${index + 1}`}
+              />
+            ))}
+          </div>
+                <a href="#contact">
                 <Button
                   className={style.button}
                   sx={{
@@ -196,6 +278,7 @@ export default function Home() {
                 >
                   {t("buttonSeeMore")}
                 </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -229,7 +312,7 @@ export default function Home() {
             <div className={style.contactFrame}>
               <div>
                 <div className={style.contactInfo}>
-                  <div className={style.contact}>
+                  <div id={'contact'} className={style.contact}>
                     <h5>{t("contact.title")}</h5>
                     <p>
                       <a href="tel:+12345567890">+12 345 567 890</a>
@@ -271,22 +354,8 @@ export default function Home() {
                     </h5>
                     <div className={style.form}>
                       <TextFieldBox />
-                    </div>
-                    <Button
-                      className={style.button}
-                      sx={{
-                        "&.MuiButton-text": {
-                          fontFamily: " 'Montserrat', sans-serif",
-                          fontWeight: " 500",
-                          fontSize: "24px",
-                          textAlign: "center",
-                          color: "#fff",
-                          textTransform: "none",
-                        },
-                      }}
-                    >
-                      {t("buttonSend")}
-                    </Button>
+                      </div>
+                    
                   </div>
                 </div>
               </div>
@@ -295,6 +364,7 @@ export default function Home() {
           <div />
         </div>
       </MainLayout>
+      
     </>
   );
 }
