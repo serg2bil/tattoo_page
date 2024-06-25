@@ -1,0 +1,146 @@
+.profil{
+    margin-top: 150px;
+    margin-bottom: 70px;
+    
+   
+}
+.profil>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.biography{
+display: flex;
+gap: 0 130px;
+margin-bottom: 80px;
+}
+.biography>div{
+ width: 100%;
+}
+.biography>img{
+  height: 450px;
+}
+.biography>div>p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 275;
+    font-size: 40px;
+    line-height: 140%;
+    color: #fffafa;
+    
+}
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.button {
+    border: 2px solid rgba(80, 80, 80, 1);
+    border-radius: 8px;
+    
+    width: 207px;
+    height: 53px;
+    transition: 0.6ms;
+    background-image: linear-gradient(116deg, #00f3bc 0%, rgba(0, 0, 0, 0) 90%);
+  }
+  
+  .button:hover {
+    transition: 0.6ms;
+  
+    border: 1px solid rgba(1, 146, 113, 1);
+  }
+  
+  .button:active {
+    transition: 0.6ms;
+  
+    color: #00f3bc !important;
+    transition: 0.6ms;
+  
+    border: 1px solid #00f3bc;
+    background: #fff;
+  }
+
+  .profil>div>div{
+    display: flex;
+    justify-content: center;
+  }
+
+
+ 
+  .images {
+    cursor: pointer;
+  }
+  .images>img{
+    transition: all 0.2s;
+  }
+  .images>img:hover{
+    
+    transform: scale(1.02);
+  }
+  .modalBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    box-shadow: 24px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  
+  .modalImage {
+    max-width: 770px;
+    max-height: 1027px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+  }
+  
+  .backgroundBlur {
+    filter: blur(5px);
+  }
+  .modalBox>div{
+  position: relative;
+  }
+
+
+
+  @media screen and (max-width: 1030px) {
+    .biography{
+      gap: 100px;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .biography{
+      gap: 0;
+     
+    }
+    .biography>div>p{
+      display: none;
+    }
+    .buttonDiv,.button{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .images>img{
+      width: 300px;
+      height: 400px;
+    }
+    .biography>img{
+      width: 300px;
+      height: 380px;
+    }
+    
+  }

@@ -1,0 +1,80 @@
+{
+  "buttonConsul": "Konsultacja",
+  "buttonSeeMore":"Zobacz więcej",
+  "buttonSend":"Wysłij",
+  "firstScreen": {
+    "title": "Studio tatuażu",
+    "slogan": "Twój niepowtarzalny tatuaż od doświadczonych artystów"
+  },
+  "aboutUs": {
+    "title": "Dizzy Tattoo - Studio Tatuażu, Warszawa, Mokotów",
+    "text": {
+      "fm1": "Salon",
+      "fm2": "to kreatywna platforma, gdzie życzenia klienta stają się dziełami sztuki.",
+      "fm3": "Nasze studio tatuażu łączy jakość z wysoką obsługą i dbałością o klienta. Oferujemy Państwu wykonanie wysokiej jakości oryginalnych tatuaży od mistrzów, których praca jest poważna i posiadają wieloletnie doświadczenie",
+      "fm4": "w dziedzinie tatuażu.",
+      "fm5": "Oprócz tatuowania nasi mistrzowie pomogą Ci w wyborze szkicu i doradzą całkowicie BEZPŁATNIE.",
+      "fm6": "Oferujemy profesjonalne usługi w Warszawie w zakresie tatuażu, a także laserowego usuwania tatuaży, nakładania się starych tatuaży, nakładających się blizn i rozstępów.",
+      "fm7": "to nie zwykła studio tatuażu... Warszawa jest pełna wspaniałych tatuażystów i z jakiegoś powodu oni wszyscy pracują u nas.",
+      "fm8": "Nasza pracownia udziela dużą wagę do utrzymania pracowni w czystości, używamy wyłącznie jednorazowych materiałów eksploatacyjnych oraz profesjonalnego sprzętu.",
+      "fm9": "Czekamy na Ciebie"
+    }
+  },
+  "ourGroup": {
+    "title": "Nasza Ekipa",
+    "dmitrij": "Dmitrij",
+    "ketto": "Ketto",
+    "yoka": "Yoka"
+  },
+  "offers": {
+    "title": "Usługi",
+    "tag":"Tattoo",
+    "firstOffer":{
+        "title":{
+            "fm1":"Tatuaż-Sposób na wyrażenie siebie",
+            "fm2":"Tatuaż ma niezwykle długą historię."
+        },
+        "text":"Określenie jego początków jest dyskusyjne,dlatego, że skóra  ulega całkowitej biodegradacji. Przypuszcza się jednak, że już 12000 lat przed naszą erą występowały tatuaże na wyspach polinezyjskich ..."
+    },
+    "secondOffer":{
+        "title":{
+            "fm1":"Posiadanie pięknego tatuażu",
+            "fm2":"to prawdziwy powód do dumy."
+        },
+        "text":"Określenie jego początków jest dyskusyjne,dlatego, że skóra  ulega całkowitej biodegradacji. Przypuszcza się jednak, że już 12000 lat przed naszą erą występowały tatuaże na wyspach polinezyjskich ..."
+    }
+  },
+  "portfolio":{
+    "tittle":"Portfolio"
+  },
+  "slogan":{
+    "title":"Tatuaż twój styl, nasza pasja"
+  },
+  "analitics":{
+    "doneTattoo":"wykonanych tatuaży",
+    "workTime":"godzin pracy",
+    "satisfiedClients":"zadowolonych klientów"
+  },
+  "contact":{
+    "title":"Kontakt",
+    "address":"ul. Jurajska 4/lokal U4, 02-699, Warszawa",
+    "schedule":{
+      "title":"Studio czynne",
+      "text":{
+        "fr1":"poniedziałek – piątek",
+        "fr2":"sobota"
+      }
+    },
+    "form":{
+      "text":{
+        "fr1":"Chcesz o coś zapytać, zarezerwować termin?",
+        "fr2":"Pytaj śmiało! Odpiszemy tak szybko, jak tylko się da!"
+      },
+      "label":{
+        "input1":"Imię i Nazwisko",
+        "input2":"E-mail",
+        "input3":"Wiadomości"
+      }
+    }
+  }
+}

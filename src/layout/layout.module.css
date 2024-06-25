@@ -1,0 +1,445 @@
+.gridContainer,
+.HgridContainer {
+  display: grid;
+
+  grid-template-columns: 1fr 12fr 1fr;
+}
+
+.header {
+  
+
+  
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  color: #ffffff;
+  
+
+  font-family: "Montserrat", sans-serif;
+}
+.HgridContainer {
+  z-index: 999;
+  position: fixed;
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.gridContainerS,
+.HSgridContainer {
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.item1 {
+  flex-grow: 4;
+}
+.item2 {
+  flex-grow: 13;
+}
+.item4 {
+  flex-grow: 1;
+}
+.item5 {
+  flex-grow: 1;
+}
+.item6 {
+  flex-grow: 3;
+}
+
+.item6 {
+  top: 20%;
+}
+
+.location,
+.contact,
+.nav_menu {
+  display: flex;
+  align-items: center;
+}
+.location > svg,
+.contact > svg {
+  margin-left: 8px;
+  margin-bottom: 5px;
+  max-width: 16px;
+}
+
+.logo {
+  min-width: 78px;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+}
+
+.nav_menu {
+  gap: 24px;
+}
+
+.location a,
+.contact a {
+  position: relative; /* Добавляем относительное позиционирование */
+  padding-bottom: 5px; /* Добавляем отступ для псевдоэлемента */
+}
+.nav_menu a {
+  position: relative; /* Добавляем относительное позиционирование */
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 5px; /* Добавляем отступ для псевдоэлемента */
+  transition: color 0.2s ease-in-out;
+}
+
+.nav_menu a::after,
+.location a::after,
+.contact a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+  border-radius: 3px 3px 0px 0px;
+  background-color: cyan;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.contact a::after {
+  width: 120%;
+}
+.location a::after{
+   width: 135%;
+}
+
+.nav_menu a:hover::after,
+.location a:hover::after,
+.contact a:hover::after {
+  opacity: 1;
+}
+
+
+
+.location {
+  position: relative;
+  left: 0;
+  max-width: 120px;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 189px;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 100px !important;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+width: 100%;
+  opacity: 0.8;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: #ffffff;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.footer_logo {
+  border: none;
+  width: 180px;
+
+}
+/* @media screen and (max-width: 1075px) {
+    .footer_social>div{
+      flex-direction: column;
+    }
+    .footer_navigation>div{
+      flex-direction: column;
+    }
+  } */
+
+
+.links {
+  margin: 24px 0px 24px 0;
+  display: flex;
+  
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_social > div {
+  display: flex;
+  gap: 24px;
+}
+
+.footer_social > h4 {
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.footer_social > div > a>p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.footer_copy {
+  font-size: 16px;
+}
+
+.footer_navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_navigation > div {
+  display: flex;
+  gap: 22px;
+}
+
+.footer_navigation > h4 {
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.footer_navigation > div > a>p {
+  font-weight: 300;
+  font-size: 20px;
+}
+.seeMore{
+  /* display: none; */
+}
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+  .gridContainerS,
+  .HSgridContainer{
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+
+  .gridContainer{
+      display: flex;
+      justify-content: center;
+    }
+  .marginL, .marginR {
+      display: none;
+    }
+    .item4{
+      display: none;
+    }
+  
+    
+}
+@media screen and (max-width: 1000px) {
+  .footer{
+    gap:30px
+  }
+  .nav_menu{
+    gap: 15px;
+  }
+.nav_menu>a>p{
+  font-size: 15px;
+
+}
+
+.footer_social>h4{
+  font-size: 20px;
+}
+.footer_navigation>h4{
+  font-size: 20px;
+}
+.footer_navigation>div>a>p{
+  font-size: 15px;
+}
+.footer_copy{
+  font-size: 14px;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+  .nav_menu{
+    gap: 9px;
+  }
+  .contact{
+    width: 150px;
+  }
+  .item1 {
+    flex-grow: 1;
+  }
+  .item2 {
+    flex-grow: 1;
+  }
+  .item4 {
+    flex-grow: 1;
+  }
+  .item5 {
+    flex-grow: 1;
+  }
+  .item6 {
+    flex-grow: 1;
+  }
+  
+  .HSgridContainer{
+    display: flex;
+    justify-content: center;
+  }
+  .HSmarginL, .HSmarginR {
+    display: none;
+  }
+.footer{
+flex-direction: column;
+align-items: center;
+
+}
+.links{
+  justify-content: space-around;
+  display: flex;
+}
+.footer_social>div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer_navigation>div{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+}
+@media screen and (max-width: 720px) {
+  .HgridContainer{
+    grid-template-columns: 0fr 1fr 0fr;
+  }
+  
+  .MenuButtonM{
+    display: block;
+  }
+  .seeMore{
+    display: block;
+  }
+  .item1 {
+    flex-grow: 1;
+  }
+  .item2 {
+    display: none;
+  }
+  
+  .item5 {
+    flex-grow: 0.5;
+  }
+  .item6 {
+    display: none;
+  }
+  .item7{
+    flex-grow: 1;
+    width: 0px;
+  }
+  .header{
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 380px) {
+  .contact{
+    font-size: 14px;
+  }
+  .item5{
+    width: 100px;
+  }
+  .item1{
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 300px) {
+  .item5{
+    display: none;
+  }
+}
+
+/* mobileMenu */
+.mobileMenu>div>a>p{
+  font-family: "Montserrat", sans-serif;
+}
+.option{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5px;
+  
+
+}
+.option>p{
+  padding-bottom: 2px;
+  border-bottom: 2px ridge #00F3BC;
+}
+.optionsmobile{
+  margin-top: 100px;
+  padding-bottom: 10px;
+ display: flex;
+ flex-direction: column;
+ gap:25px;
+ width: 100%;
+ border-bottom: 4px double #00f3ba;
+}
+
+.buttonConteinr{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.langSelectMobile{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.mobileMenu {
+  display: flex;
+  
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  z-index: 999;
+  position: fixed;
+  top: -200%;
+height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.6s ease; /* Smooth transition */
+}
+
+.menuOpen {
+  top: 0px; 
+}

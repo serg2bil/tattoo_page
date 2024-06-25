@@ -1,0 +1,55 @@
+.list {
+    list-style-type: none;
+    background-color: black;
+    border-radius: 8px;
+    height: 45px; /* Начальная высота для закрытого списка */
+    width: 62px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: height 0.4s;
+    z-index: 1;
+}
+
+.open {
+    height: 145px !important; 
+    z-index: 99999;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.listItem {
+    width: 100%;
+    z-index: 99999;
+}
+.selectText{
+    
+    margin-right: 8px;
+}
+.selectText::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:5px;
+    bottom:5px;
+    width: 80%;
+    height: 2px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: cyan;
+  
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.selectText:hover:after{
+    opacity: 1;
+}
+
+
+.color {
+    color: #00f3bc;
+}
+

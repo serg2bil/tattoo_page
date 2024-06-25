@@ -1,0 +1,25 @@
+{
+  "header": {
+    "nav": {
+      "aboutUs": "O NAS",
+      "ourGroup": "ARTYŚCI",
+      "offers": "USŁUGI",
+      "portfolio": "PORTFOLIO"
+    }
+    },
+
+    "footer":{
+      "social":"Social",
+        "navigation":{
+            "title":"Navigation",
+            "aboutUs": "O nas",
+            "ourGroup": "Artyści",
+            "offers": "Usługi",
+            "portfolio": "Portfolio",
+            "kontakt":"Kontakt"
+        }
+    },
+    "route":"DOJAZD",
+    "routeMob":"Dojazd"
+  }
+

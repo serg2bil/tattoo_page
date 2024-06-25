@@ -1,0 +1,43 @@
+.svg {
+    width: 32px;
+    height: 32px;
+
+  }
+  
+  .line1,
+  .line2,
+  .line3 {
+    
+    transition: 0.3s ease transform, 0.3s ease opacity;
+  }
+  
+  .line1 {
+    transform-origin: 0 0;
+  }
+  
+  .line3 {
+    transform-origin: 100% ;
+  }
+  
+  .open .line1 {
+    transform: translateY(-11px) translatex(1px) rotate(45deg) scaleX(0.7)  scaley(2);
+  }
+  
+  .open .line2 {
+    transform: translateY(19px) translatex(-16px) rotate(-45deg) scaleX(2) scaley(2);
+  }
+  
+  .open .line3 {
+    transform: translateY(8px) translatex(9px) rotate(45deg) scaleX(0.7) scaley(2);
+    
+  }
+
+  .menuButton{
+    display: none;
+   
+  }
+  @media screen and (max-width: 720px) {
+    .menuButton{
+      display: block;
+    }
+  }
