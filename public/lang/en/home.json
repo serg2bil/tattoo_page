@@ -1,0 +1,80 @@
+{
+  "aboutUs": {
+    "text": {
+      "fm1": "The salon",
+      "fm2": "is a creative platform where customer wishes become works of art.",
+      "fm3": "Our tattoo studio combines quality with high service and customer care. We offer you high quality original tattoos from masters whose work is serious and have years of experience",
+      "fm4": "in the field of tattoo.",
+      "fm5": "In addition to tattooing, our masters will help you choose your sketch and advise you completely FREE of charge.",
+      "fm6": "We offer professional tattoo services in Warsaw, as well as laser tattoo removal, overlapping old tattoos, overlapping scars and stretch marks.",
+      "fm7": "this is no ordinary tattoo studio.... Warsaw is full of great tattoo artists and for some reason they all work here.",
+      "fm8": "Our studio gives great importance to keeping the studio clean, we only use disposable consumables and professional equipment.",
+      "fm9": "We are waiting for you"
+    },
+    "title": "Dizzy Tattoo - Tattoo Studio Warsaw Mokotow"
+  },
+  "analitics": {
+    "doneTattoo": "tattoos made",
+    "satisfiedClients": "satisfied clients",
+    "workTime": "working hours"
+  },
+  "buttonConsul": "Consultation",
+  "buttonSeeMore": "See more",
+  "buttonSend": "Send",
+  "contact": {
+    "address": "st. Jurajska 4/lokal U4, 02-699, Warsaw",
+    "form": {
+      "text": {
+        "fr1": "Do you want to ask something, book an appointment?",
+        "fr2": "Ask boldly! We will write back as soon as we can!"
+      },
+      "label":{
+        "input1": "First and last name",
+        "input2": "Email",
+        "input3": "Message"
+      }
+    },
+    "schedule": {
+      "text": {
+        "fr1": "Monday — Friday",
+        "fr2": "Saturday"
+      },
+      "title": "Studio open"
+    },
+    "title": "Contact"
+  },
+  "firstScreen": {
+    "slogan": "Your unique tattoo from experienced artists",
+    "title": "Tattoo Studio"
+  },
+  "offers": {
+    "firstOffer": {
+      "text": "Determining its origins is debatable, as the skin is completely biodegradable. However, it is thought that tattoos were already present on the Polynesian islands as early as 12000 BC ...",
+      "title": {
+        "fm1": "Tattoo - A way to express yourself",
+        "fm2": "Tattooing has an extremely long history."
+      }
+    },
+    "secondOffer": {
+      "text": "Determining its origins is debatable, as the skin is completely biodegradable. However, it is thought that tattoos were already present on the Polynesian islands as early as 12000 BC ...",
+      "title": {
+        "fm1": "Having a beautiful tattoo",
+        "fm2": "is a real source of pride."
+      }
+    },
+    "tag": "Tattoo",
+    "title": "Services"
+  },
+  "ourGroup": {
+    "dmitrij": "Dmitry",
+    "ketto": "Ketto",
+    "title": "Our Team",
+    "yoka": "Yoka"
+  },
+  "portfolio": {
+    "tittle": "Portfolio"
+  },
+  "slogan": {
+    "title": "Tattoo your style, our passion"
+  }
+}

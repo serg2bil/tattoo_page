@@ -1,0 +1,554 @@
+/* General */
+
+/* Conteiners */
+
+.textConteiner {
+  position: relative;
+  box-shadow: 1px 1px 20px 0 rgba(70, 70, 70, 0.4);
+  border-radius: 20px;
+  background-color: #0D0D0D;
+  padding: 56px;
+  transition:all 0.6s;
+}
+
+.textConteiner:before {
+  border: 2px solid gray;
+  content: " ";
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url("../../public/svg/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  transition: all 2.6;
+  
+}
+
+
+
+/* Button */
+.button {
+  border: 2px solid rgba(80, 80, 80, 1);
+  border-radius: 8px;
+  min-width: 207px;
+  width: 40%;
+  height: 53px;
+  transition: 0.6ms;
+  background-image: linear-gradient(116deg, #00f3bc 0%, rgba(0, 0, 0, 0) 90%);
+}
+
+.button:hover {
+  transition: 0.6ms;
+
+  border: 1px solid rgba(1, 146, 113, 1);
+}
+
+.button:active {
+  transition: 0.6ms;
+
+  color: #00f3bc !important;
+  transition: 0.6ms;
+
+  border: 1px solid #00f3bc;
+  background: #fff;
+}
+
+/* Contact */
+.formBox>div>.button{
+  width: 139px;
+  margin-top: 64px ;
+  float: right;
+}
+
+
+
+/* Style text */
+
+/* First Screen */
+.title {
+  cursor: default;
+  border-left: 2px solid #00f3bc;
+  padding-left: 2%;
+  font-family: "Inknut_Antiqua", sans-serif;
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  color: #b8b8b8;
+}
+/* First Screen */
+.greeting {
+  cursor: default;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 275;
+  font-size: 40px;
+  line-height: 150%;
+  
+  color: #fffafa;
+}
+.greeting>h1{
+  margin-bottom: 15px;
+}
+
+/* About Us */ /* Offers */
+.textConteiner > p, .s {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 275;
+  font-size: 24px;
+  line-height: 130%;
+  color: #fff;
+}
+/* About Us */
+.highlight {
+  font-family: "Inknut_Antiqua", sans-serif;
+  font-weight: 300;
+  color: #00f3bc;
+}
+
+/* Nasza Ekipa */
+.backgroundTitle,.backgroundTitleSlogan {
+  cursor: default;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 132px;
+  line-height: 60%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: black;
+  margin-left: -15%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 243, 188, 1) 0%,
+    rgba(0, 243, 188, 0) 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 2px transparent;
+}
+/* Nasza Ekipa */
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+/* Nasza Ekipa */
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 117%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Offers */
+.topBlock>h5{
+  font-family: "Inknut_Antiqua", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  color: #b8b8b8;
+}
+/* Offers */
+
+.border>p{
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 112%;
+  color: gray;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* First Screen */
+.backgraund {
+  width: 100%;
+  z-index: -2;
+}
+.firstScreen {
+  margin-top: 85px;
+  width: 100%;
+  height: 941px;
+
+  background: no-repeat url("../../public/img/background.png");
+  
+  
+  background-size: cover; /* растягиваем изображение на всю ширину и высоту */
+  background-position: center center; /* позиционируем фон по центру */
+  background-repeat: no-repeat; /* запрещаем повторение фона */
+  position: relative;
+  z-index: auto;
+}
+.greeting {
+  margin-left: 12%;
+  width: 35%;
+  max-width: 648px;
+  padding-top: 230px;
+ 
+}
+
+/* About Us */
+
+.gridContainerM {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 10fr 2fr;
+}
+
+
+
+.mainContent {
+  margin-top: 220px;
+}
+
+/* Nasza Ekipa */
+.ourGroup {
+  margin-top: 220px;
+}
+
+
+.cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 220px;
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+
+}
+
+.bottomCard {
+  transition: all 0.6s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  height: 148px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+.textContainer {
+  transition: all 0.6s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Anim Card */
+.card:hover .bottomCard {
+  transition: all 0.6s;
+  height: 248px;
+}
+.card:hover .textContainer{
+  transition: all 0.6s;
+transform: translateY(25px);
+}
+.bottomCard>svg{
+  transition: all 0.6s;
+}
+.card:hover .bottomCard>svg{
+  transition: all 0.6s;
+transform: translateY(25px);
+}
+
+/* Offers */
+.offers{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 220px;
+}
+
+.topBlock{
+  margin-bottom: 35px;
+}
+.border{
+  border: 1px solid gray;
+    border-radius: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    min-width: 70px;
+    width: 95px;
+    height: 26px;
+}
+.topBlock{
+  display: flex;
+  justify-content: space-between;
+}
+.bottomBlock{
+  margin-top: 25px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.bottomBlock>svg{
+  margin-right: 5%;
+}
+.offers>a:hover{
+  transform: scale(1.009);
+  transition:all 0.6s;
+}
+.offers>a:hover {
+  &:before {
+    border-color: rgb(145, 145, 145);
+    transition: all 0.6;
+    opacity: 0.3;
+  }
+}
+
+/* Portfolio */
+.portfolio{
+  margin-bottom: 220px;
+}
+.portfolio>div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 48px;
+}
+.cardsFlex{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.img{
+  border-radius: 20px;
+  width: 360px;
+  
+  border: 2px solid rgba(46, 45, 45, 0.637);
+}
+
+
+/* Analitiks */
+.analitics{
+  margin-bottom: 220px;
+}
+
+.slogan{
+text-align: center;
+
+  /* width: 1600px;
+max-width: calc(100% - 20px); */
+    
+}
+.slogan>span{
+
+  margin: 0;
+}
+.bottomtTitle{
+  font-family: "Inknut_Antiqua", sans-serif;
+font-weight: 600;
+font-size: 80px;
+line-height: 120%;
+letter-spacing: -0.05em;
+text-align: center;
+}
+.statsConteiner{
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.statsConteiner>div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.count{
+  
+  font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-size: 40px;
+line-height: 130%;
+color: #00f3bc;
+}
+
+/* Contact */
+.contactFrame{
+  margin-bottom: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactFrame>div{
+  display: flex;
+  gap: 113px;
+  
+  
+  
+}
+.contactInfo{
+  border-radius: 20px;
+  background: #0d0d0d;
+  width: 367px;
+  border: 2px solid rgba(46, 45, 45, 0.637);
+}
+.contact, .schedule{
+  width: 303px;
+  margin: 40px 32px;
+}
+.schedule>h5, .contact>h5{
+  margin-bottom: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+}
+.schedule>p, .contact>p{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.formBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.formBox>div{
+  width: 100%;
+}
+.formBox>div>h5{
+  margin-bottom: 64px;
+  font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 22px;
+line-height: 130%;
+color: #c8c8c8;
+}
+
+
+@media screen and (max-width: 1034px) {
+  .gridContainerM {
+    
+    grid-template-columns: 1fr 20fr 1fr;
+    
+  }
+  .img{
+    width: 260px;
+  }
+  .contactFrame>div{
+    flex-wrap: wrap;
+  }
+  .contactInfo{
+    width: 100%;
+    display: flex;
+  }
+  .backgroundTitle{
+    font-size: 100px;
+    margin-left:-20px;
+  }
+  .firstScreen{
+    height: 800px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .firstScreen{
+    height: 700px;
+  }
+  .img{
+    width: 100%;
+  }
+  
+  .gridContainerM {
+    
+    grid-template-columns: 0.3fr 20fr 0.3fr;
+    
+  }
+  .contactInfo{
+    
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact>h5{
+    display: none;
+  }
+  .button{
+    width: 100% !important;
+    float: none !important;
+  }
+  .greeting{
+    width: 80%;
+  }
+  .greeting>p{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .firstScreen{
+    height: 500px;
+  }
+  .greeting{
+    padding-top: 100px;
+  }
+  .greeting>h1{
+    font-size: 40px;
+  }
+  .greeting>p{
+    font-size: 30px;
+  }
+  .backgroundTitle{
+    
+    font-size: 50px;
+    margin-left:0px;
+  }
+  .textConteiner{
+    padding: 20px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .topBlock{
+    width: 00px;
+  }
+  .contact, .schedule{
+    width: 200px;
+    margin: 20px 16px;
+  }
+  .contact>p, .schedule>p{
+    font-size: 19px;
+  }
+  .schedule>h5{
+    font-size: 25px;
+  }
+  .backgroundTitle{
+    font-size: 50px;
+  }
+  .bottomtTitle{
+    font-size: 45px;
+  }
+}
+

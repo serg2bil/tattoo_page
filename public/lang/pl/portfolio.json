@@ -1,0 +1,15 @@
+{
+    "button":"Konsultacja",
+    "dmitrij":{
+        "name":"Dmitrij",
+        "biography":"Dmitrij jest doświadczonym tatuażystom. Zajmuje się tatuażem około 28 lat. Pracuje w stylu realistycznym. Również poodejmuję covery tatuażów."
+    },
+    "ketto":{
+        "name":"Ketto",
+        "biography":"Kateryna w swoich pracach jest bardzo blisko natury, więc ptaki i kompozycje z kwiatów są wzorami, w których czuje się wyśmienicie. Zakres umiejętności jest bardzo szeroki: od realistyki do stylu vipshading. Najlepiej czuje się w kolorowych pracach."
+    },
+    "yoka":{
+        "name":"Yoka",
+        "biography":"Ma doświadczenie 11 lat"
+    }
+}

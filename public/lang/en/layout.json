@@ -1,0 +1,23 @@
+{
+  "header": {
+    "nav": {
+      "aboutUs": "ABOUT US",
+      "ourGroup": "TEAM",
+      "offers": "SERVICES",
+      "portfolio": "PORTFOLIO"
+    }
+  },
+  "footer": {
+    "social": "Social",
+    "navigation": {
+      "title": "Navigation",
+      "aboutUs": "About Us",
+      "ourGroup": "Team",
+      "offers": "Services",
+      "portfolio": "Portfolio",
+      "kontakt": "Contact"
+    }
+  },
+  "route": "ROUTE",
+  "routeMob": "Route"
+}
