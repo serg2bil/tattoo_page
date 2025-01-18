@@ -6,7 +6,16 @@ import other from "@/styles/Home.module.css";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Viewer from 'viewerjs';
+
+import {serverSideTranslations} from 'next-i18next';
 import 'viewerjs/dist/viewer.css';
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      ...(await serverSideTranslations(context.locale, ['portfolio'])),
+    },
+  };
+}
 
 export default function Dmitrij() {
   const { t } = useTranslation("portfolio");

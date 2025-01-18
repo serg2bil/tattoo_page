@@ -9,10 +9,20 @@ import { useTranslation } from "react-i18next";
 import { IconButton, Menu } from "@mui/material";
 import MenuButton from "@/components/Menubutton/button";
 import LanguageSelectorMobile from "@/components/LanguageSelect/SelectMobile";
+import {serverSideTranslations} from 'next-i18next';
 const DynamicLanguageSelector = dynamic(
   () => import("../components/LanguageSelect/Select"),
   { ssr: false }
 );
+
+
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      ...(await serverSideTranslations(context.locale, ['layout'])),
+    },
+  };
+}
 
 export default function MainLayout({ children }) {
   const { t } = useTranslation("layout");

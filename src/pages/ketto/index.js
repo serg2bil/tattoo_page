@@ -7,6 +7,14 @@ import { useTranslation } from "react-i18next";
 import Viewer from 'viewerjs';
 import 'viewerjs/dist/viewer.css';
 import { useState, useEffect, useRef } from "react";
+import {serverSideTranslations} from 'next-i18next';
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      ...(await serverSideTranslations(context.locale, ['portfolio'])),
+    },
+  };
+}
 
 export default function Dmitrij() {
   const { t } = useTranslation("portfolio");
