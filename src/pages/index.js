@@ -12,19 +12,29 @@ import Viewer from "viewerjs"; // Import Viewer library
 import "viewerjs/dist/viewer.min.css"; // Import Viewer styles
 
 
-import { serverSideTranslations } from 'next-i18next';
-
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      ...(await serverSideTranslations(context.locale, ['home'])),
-    },
-  };
-}
-
 export default function Home() {
   const viewerRef = useRef(null);
-  const { t } = useTranslation("home");
+
+
+  const { t, i18n } = useTranslation("home");
+  const [translationsLoaded, setTranslationsLoaded] = useState(false);
+
+
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      setTranslationsLoaded(true);
+    } else {
+      i18n.on('initialized', () => setTranslationsLoaded(true));
+    }
+  }, [i18n]);
+
+
+  if (!translationsLoaded) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+
   const cardsData = [
     {
       name: "Dmitrij",
@@ -45,7 +55,7 @@ export default function Home() {
       backgroundImage: "/img/portfolio/Yoka.png",
     },
   ];
-
+  // Функция для генерации массива URL-адресов изображений
   const generateImageUrls = () => {
     let urls = [];
     for (let i = 1; i <= 10; i++) {

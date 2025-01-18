@@ -7,17 +7,26 @@ import { useTranslation } from "react-i18next";
 import Viewer from 'viewerjs';
 import 'viewerjs/dist/viewer.css';
 import { useState, useEffect, useRef } from "react";
-import {serverSideTranslations} from 'next-i18next';
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      ...(await serverSideTranslations(context.locale, ['portfolio'])),
-    },
-  };
-}
 
 export default function Dmitrij() {
-  const { t } = useTranslation("portfolio");
+  const { t, i18n } = useTranslation("portfolio");
+  const [translationsLoaded, setTranslationsLoaded] = useState(false);
+
+
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      setTranslationsLoaded(true);
+    } else {
+      i18n.on('initialized', () => setTranslationsLoaded(true));
+    }
+  }, [i18n]);
+
+
+  if (!translationsLoaded) {
+    return (
+      <div>Loading...</div>
+    );
+  }
   const [open, setOpen] = useState(false);
   const [selectedImages, setSelectedImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
