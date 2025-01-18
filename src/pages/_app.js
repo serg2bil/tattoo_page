@@ -1,11 +1,17 @@
 // src/pages/_app.js
-import { appWithTranslation } from 'next-i18next';
-import i18n from '../i18n';
+import { Suspense } from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../i18n";  // Настройте свой i18n
 import '../styles/globals.css';
 
-
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <Suspense fallback={<div>Loading translations...</div>}>
+        <Component {...pageProps} />
+      </Suspense>
+    </I18nextProvider>
+  );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

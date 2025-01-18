@@ -15,22 +15,9 @@ import "viewerjs/dist/viewer.min.css"; // Import Viewer styles
 export default function Home() {
   const viewerRef = useRef(null);
   const { t, i18n } = useTranslation("home");
-  const [isLoadingTranslations, setIsLoadingTranslations] = useState(true);
-
-  useEffect(() => {
-    if (i18n.isInitialized) {
-      setIsLoadingTranslations(false);
-    } else {
-      const handle = () => {
-        setIsLoadingTranslations(false);
-      };
-      i18n.on("initialized", handle);
-
-      return () => {
-        i18n.off("initialized", handle);
-      };
-    }
-  }, [i18n]);
+  if (i18n.isInitialized === false) {
+    return <div>Loading...</div>; // Это можно заменить на спиннер или другое сообщение
+  }
   const cardsData = [
     {
       name: "Dmitrij",
@@ -135,13 +122,7 @@ export default function Home() {
       viewer.destroy();
     };
   }, []); 
-  if (isLoadingTranslations) {
 
-    return (
-<>
-</>
-    );
-  }
   return (
     <>
       <MainLayout>
