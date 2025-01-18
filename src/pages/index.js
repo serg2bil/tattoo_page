@@ -14,26 +14,7 @@ import "viewerjs/dist/viewer.min.css"; // Import Viewer styles
 
 export default function Home() {
   const viewerRef = useRef(null);
-  const { t, i18n } = useTranslation("home");
-  // Проверяем, инициализированы ли переводы
-  const [isLoaded, setIsLoaded] = useState(false);
-
-
-  useEffect(() => {
-    // После инициализации переводов ставим isLoaded в true
-    if (i18n.isInitialized) {
-      setIsLoaded(true);
-    } else {
-      i18n.on("initialized", () => setIsLoaded(true));
-    }
-  }, [i18n]);
-
-  // Пока переводы не загружены, показываем индикатор загрузки
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
-
-
+  const { t } = useTranslation("home");
   const cardsData = [
     {
       name: "Dmitrij",
@@ -107,8 +88,6 @@ export default function Home() {
   const handleCloseViewer = () => {
     setOpenViewer(false);
   };
-
-  
 
   useEffect(() => {
     
