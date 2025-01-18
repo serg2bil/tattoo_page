@@ -8,31 +8,28 @@ import { useTranslation } from "react-i18next";
 import Viewer from 'viewerjs';
 import 'viewerjs/dist/viewer.css';
 
-
 export default function Dmitrij() {
   const { t, i18n } = useTranslation("portfolio");
-  const [translationsLoaded, setTranslationsLoaded] = useState(false);
-
-
-  useEffect(() => {
-    if (i18n.isInitialized) {
-      setTranslationsLoaded(true);
-    } else {
-      i18n.on('initialized', () => setTranslationsLoaded(true));
-    }
-  }, [i18n]);
-
-
-  if (!translationsLoaded) {
-    return (
-      <div>Loading...</div>
-    );
-  }
   const [open, setOpen] = useState(false);
   const [selectedImages, setSelectedImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const viewerRef = useRef(null);
+  const [isLoadingTranslations, setIsLoadingTranslations] = useState(true);
 
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      setIsLoadingTranslations(false);
+    } else {
+      const handle = () => {
+        setIsLoadingTranslations(false);
+      };
+      i18n.on("initialized", handle);
+
+      return () => {
+        i18n.off("initialized", handle);
+      };
+    }
+  }, [i18n]);
   
   const profil = {
     name: t("yoka.name"),
@@ -93,9 +90,15 @@ export default function Dmitrij() {
   const handleClose = () => {
     setOpen(false);
   };
+  if (isLoadingTranslations) {
 
+    return (
+<>
+</>
+    );
+  }
   return (
-    <Suspense fallback={<div>Loading translations...</div>}>
+    <>
       <MainLayout>
         <div className={`${other.gridContainerM} `}>
           <div />
@@ -148,6 +151,6 @@ export default function Dmitrij() {
           <div />
         </div>
       </MainLayout>
-      </Suspense>
+    </>
   );
 }

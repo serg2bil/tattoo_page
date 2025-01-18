@@ -14,27 +14,23 @@ import "viewerjs/dist/viewer.min.css"; // Import Viewer styles
 
 export default function Home() {
   const viewerRef = useRef(null);
-
-
   const { t, i18n } = useTranslation("home");
-  const [translationsLoaded, setTranslationsLoaded] = useState(false);
-
+  const [isLoadingTranslations, setIsLoadingTranslations] = useState(true);
 
   useEffect(() => {
     if (i18n.isInitialized) {
-      setTranslationsLoaded(true);
+      setIsLoadingTranslations(false);
     } else {
-      i18n.on('initialized', () => setTranslationsLoaded(true));
+      const handle = () => {
+        setIsLoadingTranslations(false);
+      };
+      i18n.on("initialized", handle);
+
+      return () => {
+        i18n.off("initialized", handle);
+      };
     }
   }, [i18n]);
-
-
-  if (!translationsLoaded) {
-    return (
-      <div>Loading...</div>
-    );
-  }
-
   const cardsData = [
     {
       name: "Dmitrij",
@@ -139,7 +135,13 @@ export default function Home() {
       viewer.destroy();
     };
   }, []); 
+  if (isLoadingTranslations) {
 
+    return (
+<>
+</>
+    );
+  }
   return (
     <>
       <MainLayout>

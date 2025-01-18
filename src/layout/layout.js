@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Select from "@/components/LanguageSelect/Select";
 import style from "./layout.module.css";
 import { useRouter } from "next/router";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { IconButton, Menu } from "@mui/material";
@@ -15,29 +15,34 @@ const DynamicLanguageSelector = dynamic(
 );
 
 export default function MainLayout({ children }) {
-   const { t, i18n } = useTranslation("layout");
-    const [translationsLoaded, setTranslationsLoaded] = useState(false);
-  
-  
-    useEffect(() => {
-      if (i18n.isInitialized) {
-        console.log(i18n.isInitialized);
-        
-        setTranslationsLoaded(true);
-      } else {
-        i18n.on('initialized', () => setTranslationsLoaded(true));
-      }
-    }, [i18n]);
-  
-  
-    if (!translationsLoaded) {
-      return (
-        <div>Loading...</div>
-      );
-    }
+  const { t, i18n } = useTranslation("layout");
   const router = useRouter();
-
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isLoadingTranslations, setIsLoadingTranslations] = useState(true);
+
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      setIsLoadingTranslations(false);
+    } else {
+      const handle = () => {
+        setIsLoadingTranslations(false);
+      };
+      i18n.on("initialized", handle);
+
+      return () => {
+        i18n.off("initialized", handle);
+      };
+    }
+  }, [i18n]);
+
+
+  if (isLoadingTranslations) {
+
+    return (
+<>
+</>
+    );
+  }
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
