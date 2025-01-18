@@ -369,6 +369,18 @@ align-items: center;
     justify-content: space-between;
   }
 }
+
+@media (max-width: 380px) {
+  .mobileMenu {
+    display: block; /* или другой стиль, который вам нужен */
+  }
+}
+@media (min-width: 380px) {
+  .mobileMenu {
+    display: none; /* скрывает элемент при ширине экрана больше 380px */
+  }
+}
+
 @media screen and (max-width: 380px) {
   .contact{
     font-size: 14px;
