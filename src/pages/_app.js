@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
 
   // Пока переводы не загружены, показываем индикатор загрузки
   if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   return <Component {...pageProps} />;
