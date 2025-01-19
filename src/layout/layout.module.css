@@ -364,21 +364,14 @@ align-items: center;
   .item7{
     flex-grow: 1;
     width: 0px;
+    visibility:visible !important;
   }
   .header{
     justify-content: space-between;
   }
 }
-
-@media (max-width: 380px) {
-  .mobileMenu {
-    display: block; /* или другой стиль, который вам нужен */
-  }
-}
-@media (min-width: 380px) {
-  .mobileMenu {
-    display: none; /* скрывает элемент при ширине экрана больше 380px */
-  }
+.item7{
+  visibility:hidden ;
 }
 
 @media screen and (max-width: 380px) {
